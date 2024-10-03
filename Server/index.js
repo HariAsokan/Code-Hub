@@ -14,7 +14,10 @@ app.use(bodyParser.json());  // Parse incoming request bodies in JSON format
 app.get('/api', (req, res) => {
     res.send('Request received successfully');
 });
-
+app.post('/create', (req, res) => {
+    console.log(req.body)
+    res.send('Request received successfully');
+});
 // Start the server (PORT IS A SEGREGATION OF SPECIFIC SERVER )
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
